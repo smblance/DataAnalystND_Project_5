@@ -1,0 +1,203 @@
+---
+title: "enron_exploration"
+author: "Mark Ayzenshtadt"
+date: "30 Dec 2015"
+output: html_document
+---
+
+```{r}
+setwd('~/DataAnalyst/Projects/DataAnalystND_Project_5/ud120-projects/final_project/')
+enron = read.csv('final_project_data.csv')
+enron <- subset(enron, name != 'TOTAL')
+enron <- enron[-18]
+subset(enron, is.nan) <- 0
+library(ggplot2)
+```
+
+
+```{r, echo=FALSE}
+ggplot(enron, aes(salary, from_poi_to_this_person, color = poi)) +
+  geom_point()
+```
+
+```{r}
+feature_stats <- data.frame(row.names = names(enron))
+for (col in names(enron)) {
+  feature_stats[col, 'notNaN'] <- nrow(subset(enron, enron[[col]] != 'NaN'))
+  feature_stats[col, 'unique_values'] <- length(unique(enron[[col]]))
+}
+```
+
+Def-payment - deferreed income
+Total payments - other
+total stock value - excercised stock options
+total stock value - restricted stock
+I'll retain only total_stock_value as it has less NaNs
+to_messages - shared reciept with poi
+```{r}
+enron1 <- enron
+enron1$poi <- as.integer(enron1$poi) - 1
+View(cor(enron1[c(-1)], use = 'pairwise.complete.obs'))
+```
+
+Remove:
+deferral_payments - corr with deferred_income
+loan_advances - only 3 values
+excercised_stock_options - contained in total_stock_value
+other - corr with total_payments
+restricted_stock - contained in total_stock_value
+shared_receipt_with_poi - corr with to_messages
+```{r}
+names(enron)
+enron <- enron[c(-4,-6,-12,-13,-15,-22)]
+```
+
+I expect money not to be paid if financial data is NA.
+Same for emails - NA -> no emails present.
+```{r}
+enron[is.na(enron)] <- 0
+enron1 <- enron
+enron1$poi <- as.integer(enron1$poi) - 1
+View(cor(enron1[c(-1)], use = 'pairwise.complete.obs'))
+```
+
+18 are poi, 127 not
+```{r}
+summary(enron$poi)
+```
+
+Few outliers in salary, others clustered.
+```{r}
+ggplot(enron, aes(salary)) +
+  geom_histogram()
+```
+
+1 outlier - Ken Lay, most have very low total_payments.
+```{r}
+summary(enron$total_payments)
+ggplot(enron, aes(total_payments)) +
+  geom_histogram()
+
+ggplot(subset(enron, total_payments < 9e+07), aes(total_payments)) +
+  geom_histogram()
+subset(enron, total_payments > 9e+07)$name
+```
+
+Outliers - Lavorato, Lay, Belden, Skilling
+Most < 2mil.
+```{r}
+summary(enron$bonus)
+ggplot(enron, aes(bonus)) +
+  geom_histogram(binwidth = 100000)
+subset(enron, bonus > 5e6)$name
+```
+
+Outliers - Hannon, Belden, Rice, Allen, Frevert
+```{r}
+summary(enron$deferred_income)
+ggplot(enron, aes(deferred_income)) +
+  geom_histogram()
+ggplot(enron, aes(poi, deferred_income)) +
+  geom_boxplot() +
+  stat_summary(fun.y = mean, geom = 'point', shape = 5)
+
+subset(enron, deferred_income < -2e6)$name
+```
+
+Outliers - Ken, Rice, Skilling, Hirko, Pai
+Most < 2.5mil
+```{r}
+summary(enron$total_stock_value)
+ggplot(enron, aes(total_stock_value)) +
+  geom_histogram()
+ggplot(enron, aes(total_stock_value)) +
+  geom_histogram()
+subset(enron, total_stock_value > 2e7)$name
+```
+
+Expenses - ok
+```{r}
+summary(enron$expenses)
+ggplot(enron, aes(expenses)) +
+  geom_histogram()
+```
+
+Outliers - Lay, Martin
+```{r}
+summary(enron$long_term_incentive)
+ggplot(enron, aes(long_term_incentive)) +
+  geom_histogram()
+
+subset(enron, long_term_incentive > 3e6)$name
+```
+
+Outliers - Shapiro, Kean
+```{r}
+summary(enron$to_messages)
+ggplot(enron, aes(to_messages)) +
+  geom_histogram()
+
+subset(enron, to_messages > 1e4)$name
+```
+
+Outlier - Lavorato
+```{r}
+summary(enron$from_poi_to_this_person)
+ggplot(enron, aes(from_poi_to_this_person)) +
+  geom_histogram()
+
+subset(enron, from_poi_to_this_person > 400)$name
+```
+
+Outliers - Beck, Kaminsky, Kean
+```{r}
+summary(enron$from_messages)
+ggplot(enron, aes(from_messages)) +
+  geom_histogram()
+
+subset(enron, from_messages > 4000)$name
+```
+
+Outliers - Beck, Lavorato, Delainey, Kean
+```{r}
+summary(enron$from_this_person_to_poi)
+ggplot(enron, aes(from_this_person_to_poi)) +
+  geom_histogram()
+
+subset(enron, from_this_person_to_poi > 300)$name
+```
+
+
+```{r}
+summary(enron$deferral_payments)
+ggplot(enron, aes(deferral_payments)) +
+  geom_histogram()
+
+subset(enron, deferral_payments > 2e6)$name
+```
+
+
+```{r}
+summary(enron$restricted_stock_deferred)
+ggplot(enron, aes(restricted_stock_deferred)) +
+  geom_histogram()
+
+subset(enron, restricted_stock_deferred > 1e7)$name
+```
+
+```{r}
+summary(enron$exercised_stock_options)
+ggplot(enron, aes(exercised_stock_options)) +
+  geom_histogram()
+
+subset(enron, exercised_stock_options > 1e7)$name
+```
+
+```{r}
+summary(enron$other)
+ggplot(enron, aes(other)) +
+  geom_histogram()
+
+subset(enron, other > 1e7)$name
+```
+

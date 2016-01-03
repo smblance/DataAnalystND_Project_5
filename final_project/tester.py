@@ -17,10 +17,10 @@ sys.path.append("../tools/")
 from feature_format import featureFormat, targetFeatureSplit
 
 PERF_FORMAT_STRING = "\
-\tAccuracy: {:>0.{display_precision}f}\tPrecision: {:>0.{display_precision}f}\t\
-Recall: {:>0.{display_precision}f}\tF1: {:>0.{display_precision}f}\tF2: {:>0.{display_precision}f}"
-RESULTS_FORMAT_STRING = "\tTotal predictions: {:4d}\tTrue positives: {:4d}\tFalse positives: {:4d}\
-\tFalse negatives: {:4d}\tTrue negatives: {:4d}"
+\nAccuracy: {:>0.{display_precision}f}\nPrecision: {:>0.{display_precision}f}\n\
+Recall: {:>0.{display_precision}f}\nF1: {:>0.{display_precision}f}\nF2: {:>0.{display_precision}f}"
+RESULTS_FORMAT_STRING = "\nTotal predictions: {:4d}\nTrue positives: {:4d}\nFalse positives: {:4d}\
+\nFalse negatives: {:4d}\nTrue negatives: {:4d}"
 
 def test_classifier(clf, dataset, feature_list, folds = 1000):
     data = featureFormat(dataset, feature_list, sort_keys = True)
@@ -41,10 +41,10 @@ def test_classifier(clf, dataset, feature_list, folds = 1000):
         for jj in test_idx:
             features_test.append( features[jj] )
             labels_test.append( labels[jj] )
-        
         ### fit the classifier using training set, and test on test set
         clf.fit(features_train, labels_train)
         predictions = clf.predict(features_test)
+
         for prediction, truth in zip(predictions, labels_test):
             if prediction == 0 and truth == 0:
                 true_negatives += 1
@@ -70,6 +70,11 @@ def test_classifier(clf, dataset, feature_list, folds = 1000):
         print PERF_FORMAT_STRING.format(accuracy, precision, recall, f1, f2, display_precision = 5)
         print RESULTS_FORMAT_STRING.format(total_predictions, true_positives, false_positives, false_negatives, true_negatives)
         print ""
+        with open('log.txt','a+') as f:
+            print >> f, clf
+            print >> f, PERF_FORMAT_STRING.format(accuracy, precision, recall, f1, f2, display_precision = 5)
+            print >> f, RESULTS_FORMAT_STRING.format(total_predictions, true_positives, false_positives, false_negatives, true_negatives)
+            print >> f, '\n-------------------------\n'
     except:
         print "Got a divide by zero when trying out:", clf
         print "Precision or recall may be undefined due to a lack of true positive predicitons."

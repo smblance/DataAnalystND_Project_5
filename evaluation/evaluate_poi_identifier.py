@@ -27,5 +27,15 @@ labels, features = targetFeatureSplit(data)
 
 
 ### your code goes here 
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.cross_validation import train_test_split
+from sklearn.metrics import precision_score, recall_score
+features_train, features_test, labels_train, labels_test = \
+	train_test_split(features,labels, random_state = 42, test_size = .3)
+clf = DecisionTreeClassifier()
+clf.fit(features_train,labels_train)
 
+#print sum([clf.predict([features_test[n]]) == 1 for n in range(len(features_test)) if labels_test[n] == 1])
 
+print precision_score(clf.predict(features_test), labels_test)
+print recall_score(clf.predict(features_test), labels_test)

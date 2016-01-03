@@ -1,0 +1,5 @@
+remove the features - only present for small amount of data:
+loan_advances
+restricted_stock_deferred
+director_fees
+

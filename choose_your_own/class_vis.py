@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pylab as pl
 
-def prettyPicture(clf, X_test, y_test):
+def prettyPicture(clf, X_test, y_test, X_train, y_train):
     x_min = 0.0; x_max = 1.0
     y_min = 0.0; y_max = 1.0
     
@@ -27,13 +27,20 @@ def prettyPicture(clf, X_test, y_test):
     grade_bkg = [X_test[ii][0] for ii in range(0, len(X_test)) if y_test[ii]==1]
     bumpy_bkg = [X_test[ii][1] for ii in range(0, len(X_test)) if y_test[ii]==1]
 
+    grade_sig_train = [X_train[ii][0] for ii in range(0, len(X_train)) if y_train[ii]==0]
+    bumpy_sig_train = [X_train[ii][1] for ii in range(0, len(X_train)) if y_train[ii]==0]
+    grade_bkg_train = [X_train[ii][0] for ii in range(0, len(X_train)) if y_train[ii]==1]
+    bumpy_bkg_train = [X_train[ii][1] for ii in range(0, len(X_train)) if y_train[ii]==1]
+
     plt.scatter(grade_sig, bumpy_sig, color = "b", label="fast")
     plt.scatter(grade_bkg, bumpy_bkg, color = "r", label="slow")
+    plt.scatter(grade_sig_train, bumpy_sig_train, color = "y", label="train_fast")
+    plt.scatter(grade_bkg_train, bumpy_bkg_train, color = "g", label="train_slow")
     plt.legend()
     plt.xlabel("bumpiness")
     plt.ylabel("grade")
-
-    plt.savefig("test.png")
+    plt.show()
+    #plt.savefig("test.png")
 
 import base64
 import json
