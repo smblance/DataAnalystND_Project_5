@@ -16,7 +16,6 @@ financial_features = [ \
 	#'salary', 
 	'deferral_payments',
 	'total_payments',
-	#'loan_advances',
 	'bonus',
 	#'restricted_stock_deferred', 
 	'deferred_income', 
@@ -45,15 +44,13 @@ with open("final_project_dataset.pkl", "r") as data_file:
 
 ### Task 2: Remove outliers
 
-# impute data:
-# finiancial: NaN -> 0
-# email: NaN -> median
 email_feat_values = {}
 for feat in email_features:
 	email_feat_values.update({feat : [person[feat] for person in data_dict.values() if person[feat]!= 'NaN']})
 average_feat_values = {}
 for feat in email_feat_values:
 	average_feat_values.update({feat : int(np.median(email_feat_values[feat]))})
+
 for name in data_dict:
 	for feature in data_dict[name]:
 		if data_dict[name][feature] == 'NaN':
@@ -62,7 +59,7 @@ for name in data_dict:
 			else:
 				data_dict[name][feature] = 0
 
-# remove outliers
+#remove outliers
 data_dict = {k:v for k,v in data_dict.iteritems() if v['salary'] < 6e5}
 data_dict = {k:v for k,v in data_dict.iteritems() if v['deferral_payments'] < 2e6}
 data_dict = {k:v for k,v in data_dict.iteritems() if v['total_payments'] < 9e7}
@@ -87,8 +84,8 @@ data_dict = {k:v for k,v in data_dict.iteritems() if v['shared_receipt_with_poi'
 
 my_dataset = data_dict
 
-# add feature 'part_of_incoming_from_poi' = 'from_poi_to_this_person'/'to_messages'
-# as the feature idoesn't improve the final score, it's commented out
+#add 'part_of_incoming_from_poi' = 'from_poi_to_this_person'/'to_messages'
+#the feature doesn't improve the final score
 # for name in my_dataset:
 # 	if my_dataset[name]['from_poi_to_this_person'] != 0 and my_dataset[name]['to_messages'] != 0:
 # 		my_dataset[name].update({'part_of_incoming_from_poi' : my_dataset[name]['from_poi_to_this_person']/my_dataset[name]['to_messages']})
@@ -106,37 +103,105 @@ labels, features = targetFeatureSplit(data)
 ### you'll need to use Pipelines. For more info:
 ### http://scikit-learn.org/stable/modules/pipeline.html
 
-# Provided to give you a starting point. Try a variety of classifiers. 
+# Provided to give you a starting point. Try a variety of classifiers.
 
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import MinMaxScaler, StandardScaler, Normalizer, Imputer
+from sklearn.cross_validation import StratifiedShuffleSplit
+from sklearn.svm import LinearSVC
+from sklearn.svm import SVC
+from sklearn.decomposition import PCA
+from sklearn.feature_selection import SelectKBest
+from sklearn.grid_search import GridSearchCV
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.neighbors import RadiusNeighborsClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import ExtraTreesClassifier
+from sklearn.ensemble import AdaBoostClassifier
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.ensemble import VotingClassifier
+from sklearn.naive_bayes import GaussianNB
+from sklearn.linear_model import SGDClassifier
+from sklearn.linear_model import PassiveAggressiveClassifier, RidgeClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.linear_model import LogisticRegression, LogisticRegressionCV
 from custom_classifiers import *
 
-# F1 = 0.44
-splitter_knn_clf = splitter(max_imbalance = 2, 
+minmaxscaler = MinMaxScaler()
+stdscaler = StandardScaler()
+
+nb = GaussianNB()
+etc = ExtraTreesClassifier(n_estimators = 50, min_samples_split = 1, max_features = None, class_weight = 'balanced')
+rfc = RandomForestClassifier( \
+	min_samples_split=1, max_features = None,
+	max_depth = None,  
+	class_weight = 'balanced', bootstrap = False)
+gradboost = GradientBoostingClassifier()
+ada = AdaBoostClassifier(learning_rate = .5, n_estimators = 100)
+dcf = DecisionTreeClassifier()
+sgd = SGDClassifier(class_weight = 'balanced', average = 1)
+passiveaggr = PassiveAggressiveClassifier(class_weight = 'balanced')
+ridge = RidgeClassifier(class_weight = 'balanced')
+logistic = LogisticRegression(dual = False, class_weight = 'balanced')
+knc = KNeighborsClassifier(n_neighbors = 10,
+						algorithm = ['auto', 'ball_tree', 'kd_tree', 'brute'][0],
+						leaf_size = 30,
+						weights = 'distance',
+						p = 2)
+rnc = RadiusNeighborsClassifier()
+
+imputer = Imputer(missing_values = -1, strategy = 'median')
+
+normalizer = Normalizer()
+kbest = SelectKBest(k = 'all')
+pca = PCA(n_components = 5)
+
+linsvc = LinearSVC(dual = False, class_weight = 'balanced', C = 1)
+svc = SVC(kernel = 'sigmoid', degree = 3, C = 10, class_weight = 'balanced')
+
+
+# spltr = splitter(max_imbalance = 1, 
+# 					certainty = 0.7,
+# 					clf_class = RidgeClassifier,
+# 					clf_mode = 0,
+# 					class_weight = 'balanced',
+# 					alpha = .01,
+# 					normalize = True,
+# 					solver = 'auto')
+
+spltr = splitter(max_imbalance = 1, 
 					certainty = 0.6,
 					clf_class = KNeighborsClassifier,
 					clf_mode = 0,
-					n_neighbors = 3,
-					weights = 'uniform')
+					n_neighbors = 5,
+					algorithm = ['auto', 'ball_tree', 'kd_tree', 'brute'][0],
+					leaf_size = 30,
+					weights = 'uniform',
+					p = 2)
 
-# F1 = 0.46
-replicator_knn_clf = replicator(dominant_class_prevalence = 2,
+# repl = replicator(dominant_class_prevalence = 1,
+# 						clf_class = RidgeClassifier,
+# 						class_weight = 'balanced',
+# 						alpha = .01,
+# 						normalize = True,
+# 						solver = 'auto')
+
+repl = replicator(dominant_class_prevalence = 2,
 						clf_class = KNeighborsClassifier,
-						n_neighbors = 12,
+						n_neighbors = 5,
 						weights = 'uniform')
 
-# F1 = 0.45
-weighted_knn_clf_1 = weighted_knn(n_neighbors = 6, 
-						class_weights= {0:1, 1:5}, 
-						distance_weights = 'uniform')
 
-# F1 = 0.47
-weighted_knn_clf_2 = weighted_knn(n_neighbors = 10, 
-						class_weights = {0:1, 1:3}, 
-						distance_weights = 'uniform')
+pipe = Pipeline([ \
+	('scaler', normalizer),
+	('kbest', kbest), 
+	('pca', pca), 
+	('clf', linsvc)])
 
-
-clf = weighted_knn_clf_2
+#clf = weighted_knn(n_neighbors = 6, class_weights={0:1, 1:2}, distance_weights = 'distance')
+#clf = weighted_knn(n_neighbors = 5, class_weights={0:1, 1:2}, distance_weights = 'uniform')
+#clf = weighted_knn(n_neighbors = 5, class_weights={0:1, 1:1}, distance_weights = 'uniform')
+clf = repl
 
 
 ### Task 5: Tune your classifier to achieve better than .3 precision and recall 
@@ -153,8 +218,10 @@ clf = weighted_knn_clf_2
 
 from tester import test_classifier
 
-folds = 1000
+
+folds = 100
 test_classifier(clf, my_dataset, features_list, folds = folds)
+#print sorted(zip(clf.named_steps['kbest'].scores_, features_list[1:]), reverse = True)
 
 ### Task 6: Dump your classifier, dataset, and features_list so anyone can
 ### check your results. You do not need to change anything below, but make sure
