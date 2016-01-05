@@ -1,0 +1,12 @@
+Data on the Enron POI:
+http://usatoday30.usatoday.com/money/industries/energy/2005-12-28-enron-participants_x.htm
+
+SKlearn source code:
+https://github.com/scikit-learn/scikit-learn
+
+Dealing with unbalanced data:
+http://machinelearningmastery.com/tactics-to-combat-imbalanced-classes-in-your-machine-learning-dataset/
+https://www.quora.com/In-classification-how-do-you-handle-an-unbalanced-training-set
+http://www.win-vector.com/blog/2015/02/does-balancing-classes-improve-classifier-performance/
+
+I hereby confirm that this submission is my work. I have cited above the origins of any parts of the submission that were taken from Websites, books, forums, blog posts, github repositories, etc.
