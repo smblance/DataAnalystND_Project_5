@@ -12324,3 +12324,3403 @@ True negatives: 10477
 
 -------------------------
 
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105965f80>
+
+Accuracy: 0.91192
+Precision: 0.47118
+Recall: 0.46600
+F1: 0.46858
+F2: 0.46703
+
+Total predictions: 12000
+True positives:  466
+False positives:  523
+False negatives:  534
+True negatives: 10477
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10596cfc8>
+
+Accuracy: 0.91233
+Precision: 0.47320
+Recall: 0.45900
+F1: 0.46599
+F2: 0.46177
+
+Total predictions: 12000
+True positives:  459
+False positives:  511
+False negatives:  541
+True negatives: 10489
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105864fc8>
+
+Accuracy: 0.91233
+Precision: 0.47320
+Recall: 0.45900
+F1: 0.46599
+F2: 0.46177
+
+Total predictions: 12000
+True positives:  459
+False positives:  511
+False negatives:  541
+True negatives: 10489
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105877128>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10597b0e0>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b0e0>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b0e0>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b0e0>
+
+Accuracy: 0.88167
+Precision: 0.27660
+Recall: 0.26000
+F1: 0.26804
+F2: 0.26316
+
+Total predictions: 1200
+True positives:   26
+False positives:   68
+False negatives:   74
+True negatives: 1032
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b0e0>
+
+Accuracy: 0.89833
+Precision: 0.29630
+Recall: 0.16000
+F1: 0.20779
+F2: 0.17621
+
+Total predictions: 1200
+True positives:   16
+False positives:   38
+False negatives:   84
+True negatives: 1062
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105869f38>
+
+Accuracy: 0.91333
+Precision: 0.48039
+Recall: 0.49000
+F1: 0.48515
+F2: 0.48805
+
+Total predictions: 1200
+True positives:   49
+False positives:   53
+False negatives:   51
+True negatives: 1047
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105863f38>
+
+Accuracy: 0.90167
+Precision: 0.39535
+Recall: 0.34000
+F1: 0.36559
+F2: 0.34979
+
+Total predictions: 1200
+True positives:   34
+False positives:   52
+False negatives:   66
+True negatives: 1048
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10597d0e0>
+
+Accuracy: 0.89833
+Precision: 0.29630
+Recall: 0.16000
+F1: 0.20779
+F2: 0.17621
+
+Total predictions: 1200
+True positives:   16
+False positives:   38
+False negatives:   84
+True negatives: 1062
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b0e0>
+
+Accuracy: 0.89917
+Precision: 0.30189
+Recall: 0.16000
+F1: 0.20915
+F2: 0.17660
+
+Total predictions: 1200
+True positives:   16
+False positives:   37
+False negatives:   84
+True negatives: 1063
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059860e0>
+
+Accuracy: 0.89833
+Precision: 0.29630
+Recall: 0.16000
+F1: 0.20779
+F2: 0.17621
+
+Total predictions: 1200
+True positives:   16
+False positives:   38
+False negatives:   84
+True negatives: 1062
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b0e0>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1058840e0>
+
+Accuracy: 0.85833
+Precision: 0.16346
+Recall: 0.17000
+F1: 0.16667
+F2: 0.16865
+
+Total predictions: 1200
+True positives:   17
+False positives:   87
+False negatives:   83
+True negatives: 1013
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10577b0e0>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b0e0>
+
+Accuracy: 0.87167
+Precision: 0.24528
+Recall: 0.26000
+F1: 0.25243
+F2: 0.25692
+
+Total predictions: 1200
+True positives:   26
+False positives:   80
+False negatives:   74
+True negatives: 1020
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b0e0>
+
+Accuracy: 0.91083
+Precision: 0.46154
+Recall: 0.42000
+F1: 0.43979
+F2: 0.42770
+
+Total predictions: 1200
+True positives:   42
+False positives:   49
+False negatives:   58
+True negatives: 1051
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1058800e0>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b0e0>
+
+Accuracy: 0.86333
+Precision: 0.27143
+Recall: 0.38000
+F1: 0.31667
+F2: 0.35185
+
+Total predictions: 1200
+True positives:   38
+False positives:  102
+False negatives:   62
+True negatives:  998
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b0e0>
+
+Accuracy: 0.87000
+Precision: 0.28125
+Recall: 0.36000
+F1: 0.31579
+F2: 0.34091
+
+Total predictions: 1200
+True positives:   36
+False positives:   92
+False negatives:   64
+True negatives: 1008
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1058800e0>
+
+Accuracy: 0.88167
+Precision: 0.27660
+Recall: 0.26000
+F1: 0.26804
+F2: 0.26316
+
+Total predictions: 1200
+True positives:   26
+False positives:   68
+False negatives:   74
+True negatives: 1032
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b0e0>
+
+Accuracy: 0.88333
+Precision: 0.29592
+Recall: 0.29000
+F1: 0.29293
+F2: 0.29116
+
+Total predictions: 1200
+True positives:   29
+False positives:   69
+False negatives:   71
+True negatives: 1031
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b0e0>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b098>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b098>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10557b098>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b098>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105991098>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1058800e0>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105878128>
+
+Accuracy: 0.85833
+Precision: 0.22656
+Recall: 0.29000
+F1: 0.25439
+F2: 0.27462
+
+Total predictions: 1200
+True positives:   29
+False positives:   99
+False negatives:   71
+True negatives: 1001
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b0e0>
+
+Accuracy: 0.85833
+Precision: 0.22656
+Recall: 0.29000
+F1: 0.25439
+F2: 0.27462
+
+Total predictions: 1200
+True positives:   29
+False positives:   99
+False negatives:   71
+True negatives: 1001
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587e128>
+
+Accuracy: 0.89500
+Precision: 0.37500
+Recall: 0.39000
+F1: 0.38235
+F2: 0.38690
+
+Total predictions: 1200
+True positives:   39
+False positives:   65
+False negatives:   61
+True negatives: 1035
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10577b0e0>
+
+Accuracy: 0.90000
+Precision: 0.41379
+Recall: 0.48000
+F1: 0.44444
+F2: 0.46512
+
+Total predictions: 1200
+True positives:   48
+False positives:   68
+False negatives:   52
+True negatives: 1032
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10597d0e0>
+
+Accuracy: 0.91083
+Precision: 0.46154
+Recall: 0.42000
+F1: 0.43979
+F2: 0.42770
+
+Total predictions: 1200
+True positives:   42
+False positives:   49
+False negatives:   58
+True negatives: 1051
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1058800e0>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059840e0>
+
+Accuracy: 0.88167
+Precision: 0.27660
+Recall: 0.26000
+F1: 0.26804
+F2: 0.26316
+
+Total predictions: 1200
+True positives:   26
+False positives:   68
+False negatives:   74
+True negatives: 1032
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587e0e0>
+
+Accuracy: 0.90833
+Precision: 0.44318
+Recall: 0.39000
+F1: 0.41489
+F2: 0.39959
+
+Total predictions: 1200
+True positives:   39
+False positives:   49
+False negatives:   61
+True negatives: 1051
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b0e0>
+
+Accuracy: 0.91083
+Precision: 0.46154
+Recall: 0.42000
+F1: 0.43979
+F2: 0.42770
+
+Total predictions: 1200
+True positives:   42
+False positives:   49
+False negatives:   58
+True negatives: 1051
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059860e0>
+
+Accuracy: 0.88417
+Precision: 0.32110
+Recall: 0.35000
+F1: 0.33493
+F2: 0.34381
+
+Total predictions: 1200
+True positives:   35
+False positives:   74
+False negatives:   65
+True negatives: 1026
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587d0e0>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1058850e0>
+
+Accuracy: 0.87000
+Precision: 0.28125
+Recall: 0.36000
+F1: 0.31579
+F2: 0.34091
+
+Total predictions: 1200
+True positives:   36
+False positives:   92
+False negatives:   64
+True negatives: 1008
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10557b0e0>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1058840e0>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10577b0e0>
+
+Accuracy: 0.87000
+Precision: 0.28125
+Recall: 0.36000
+F1: 0.31579
+F2: 0.34091
+
+Total predictions: 1200
+True positives:   36
+False positives:   92
+False negatives:   64
+True negatives: 1008
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059850e0>
+
+Accuracy: 0.90833
+Precision: 0.44318
+Recall: 0.39000
+F1: 0.41489
+F2: 0.39959
+
+Total predictions: 1200
+True positives:   39
+False positives:   49
+False negatives:   61
+True negatives: 1051
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587c0e0>
+
+Accuracy: 0.88417
+Precision: 0.32110
+Recall: 0.35000
+F1: 0.33493
+F2: 0.34381
+
+Total predictions: 1200
+True positives:   35
+False positives:   74
+False negatives:   65
+True negatives: 1026
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10597d0e0>
+
+Accuracy: 0.88417
+Precision: 0.32110
+Recall: 0.35000
+F1: 0.33493
+F2: 0.34381
+
+Total predictions: 1200
+True positives:   35
+False positives:   74
+False negatives:   65
+True negatives: 1026
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b0e0>
+
+Accuracy: 0.90833
+Precision: 0.44318
+Recall: 0.39000
+F1: 0.41489
+F2: 0.39959
+
+Total predictions: 1200
+True positives:   39
+False positives:   49
+False negatives:   61
+True negatives: 1051
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b0e0>
+
+Accuracy: 0.91083
+Precision: 0.46154
+Recall: 0.42000
+F1: 0.43979
+F2: 0.42770
+
+Total predictions: 1200
+True positives:   42
+False positives:   49
+False negatives:   58
+True negatives: 1051
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b0e0>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10557c0e0>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b0e0>
+
+Accuracy: 0.87000
+Precision: 0.28125
+Recall: 0.36000
+F1: 0.31579
+F2: 0.34091
+
+Total predictions: 1200
+True positives:   36
+False positives:   92
+False negatives:   64
+True negatives: 1008
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1058810e0>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059850e0>
+
+Accuracy: 0.87000
+Precision: 0.28125
+Recall: 0.36000
+F1: 0.31579
+F2: 0.34091
+
+Total predictions: 1200
+True positives:   36
+False positives:   92
+False negatives:   64
+True negatives: 1008
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059910e0>
+
+Accuracy: 0.87000
+Precision: 0.28125
+Recall: 0.36000
+F1: 0.31579
+F2: 0.34091
+
+Total predictions: 1200
+True positives:   36
+False positives:   92
+False negatives:   64
+True negatives: 1008
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b0e0>
+
+Accuracy: 0.89167
+Precision: 0.35000
+Recall: 0.35000
+F1: 0.35000
+F2: 0.35000
+
+Total predictions: 1200
+True positives:   35
+False positives:   65
+False negatives:   65
+True negatives: 1035
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587b0e0>
+
+Accuracy: 0.87000
+Precision: 0.20833
+Recall: 0.20000
+F1: 0.20408
+F2: 0.20161
+
+Total predictions: 1200
+True positives:   20
+False positives:   76
+False negatives:   80
+True negatives: 1024
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587c0e0>
+
+Accuracy: 0.88750
+Precision: 0.26667
+Recall: 0.20000
+F1: 0.22857
+F2: 0.21053
+
+Total predictions: 1200
+True positives:   20
+False positives:   55
+False negatives:   80
+True negatives: 1045
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1058820e0>
+
+Accuracy: 0.89167
+Precision: 0.35000
+Recall: 0.35000
+F1: 0.35000
+F2: 0.35000
+
+Total predictions: 1200
+True positives:   35
+False positives:   65
+False negatives:   65
+True negatives: 1035
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587c0e0>
+
+Accuracy: 0.91083
+Precision: 0.46154
+Recall: 0.42000
+F1: 0.43979
+F2: 0.42770
+
+Total predictions: 1200
+True positives:   42
+False positives:   49
+False negatives:   58
+True negatives: 1051
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10587c0e0>
+
+Accuracy: 0.87833
+Precision: 0.26531
+Recall: 0.26000
+F1: 0.26263
+F2: 0.26104
+
+Total predictions: 1200
+True positives:   26
+False positives:   72
+False negatives:   74
+True negatives: 1028
+
+-------------------------
+
+Pipeline(steps=[('scaler', Normalizer(copy=True, norm='l2')), ('kbest', SelectKBest(k='all', score_func=<function f_classif at 0x10532b5f0>)), ('clf', LinearSVC(C=1, class_weight='balanced', dual=False, fit_intercept=True,
+     intercept_scaling=1, loss='squared_hinge', max_iter=1000,
+     multi_class='ovr', penalty='l2', random_state=None, tol=0.0001,
+     verbose=0))])
+
+Accuracy: 0.61917
+Precision: 0.12262
+Recall: 0.58000
+F1: 0.20244
+F2: 0.33219
+
+Total predictions: 1200
+True positives:   58
+False positives:  415
+False negatives:   42
+True negatives:  685
+
+-------------------------
+
+Pipeline(steps=[('scaler', Normalizer(copy=True, norm='l2')), ('kbest', SelectKBest(k='all', score_func=<function f_classif at 0x10532b5f0>)), ('clf', LinearSVC(C=1, class_weight='balanced', dual=False, fit_intercept=True,
+     intercept_scaling=1, loss='squared_hinge', max_iter=1000,
+     multi_class='ovr', penalty='l2', random_state=None, tol=0.0001,
+     verbose=0))])
+
+Accuracy: 0.61333
+Precision: 0.13600
+Recall: 0.68000
+F1: 0.22667
+F2: 0.37778
+
+Total predictions: 1200
+True positives:   68
+False positives:  432
+False negatives:   32
+True negatives:  668
+
+-------------------------
+
+Pipeline(steps=[('scaler', Normalizer(copy=True, norm='l2')), ('kbest', SelectKBest(k='all', score_func=<function f_classif at 0x10544d5f0>)), ('clf', LinearSVC(C=1, class_weight='balanced', dual=False, fit_intercept=True,
+     intercept_scaling=1, loss='squared_hinge', max_iter=1000,
+     multi_class='ovr', penalty='l2', random_state=None, tol=0.0001,
+     verbose=0))])
+
+Accuracy: 0.61333
+Precision: 0.13600
+Recall: 0.68000
+F1: 0.22667
+F2: 0.37778
+
+Total predictions: 1200
+True positives:   68
+False positives:  432
+False negatives:   32
+True negatives:  668
+
+-------------------------
+
+Pipeline(steps=[('scaler', Normalizer(copy=True, norm='l2')), ('kbest', SelectKBest(k='all', score_func=<function f_classif at 0x1054345f0>)), ('clf', LinearSVC(C=1, class_weight='balanced', dual=False, fit_intercept=True,
+     intercept_scaling=1, loss='squared_hinge', max_iter=1000,
+     multi_class='ovr', penalty='l2', random_state=None, tol=0.0001,
+     verbose=0))])
+
+Accuracy: 0.61333
+Precision: 0.13600
+Recall: 0.68000
+F1: 0.22667
+F2: 0.37778
+
+Total predictions: 1200
+True positives:   68
+False positives:  432
+False negatives:   32
+True negatives:  668
+
+-------------------------
+
+Pipeline(steps=[('scaler', Normalizer(copy=True, norm='l2')), ('kbest', SelectKBest(k='all', score_func=<function f_classif at 0x10532b5f0>)), ('clf', LinearSVC(C=1, class_weight='balanced', dual=False, fit_intercept=True,
+     intercept_scaling=1, loss='squared_hinge', max_iter=1000,
+     multi_class='ovr', penalty='l2', random_state=None, tol=0.0001,
+     verbose=0))])
+
+Accuracy: 0.61333
+Precision: 0.13600
+Recall: 0.68000
+F1: 0.22667
+F2: 0.37778
+
+Total predictions: 1200
+True positives:   68
+False positives:  432
+False negatives:   32
+True negatives:  668
+
+-------------------------
+
+Pipeline(steps=[('scaler', Normalizer(copy=True, norm='l2')), ('kbest', SelectKBest(k='all', score_func=<function f_classif at 0x10532b5f0>)), ('clf', LinearSVC(C=1, class_weight='balanced', dual=False, fit_intercept=True,
+     intercept_scaling=1, loss='squared_hinge', max_iter=1000,
+     multi_class='ovr', penalty='l2', random_state=None, tol=0.0001,
+     verbose=0))])
+
+Accuracy: 0.61333
+Precision: 0.13600
+Recall: 0.68000
+F1: 0.22667
+F2: 0.37778
+
+Total predictions: 1200
+True positives:   68
+False positives:  432
+False negatives:   32
+True negatives:  668
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: distance
+
+<custom_classifiers.weighted_knn instance at 0x1059bff80>
+
+Accuracy: 0.86917
+Precision: 0.24779
+Recall: 0.28000
+F1: 0.26291
+F2: 0.27290
+
+Total predictions: 1200
+True positives:   28
+False positives:   85
+False negatives:   72
+True negatives: 1015
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: distance
+
+<custom_classifiers.weighted_knn instance at 0x1059bce18>
+
+Accuracy: 0.90750
+Precision: 0.45299
+Recall: 0.53000
+F1: 0.48848
+F2: 0.51257
+
+Total predictions: 1200
+True positives:   53
+False positives:   64
+False negatives:   47
+True negatives: 1036
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: distance
+
+<custom_classifiers.weighted_knn instance at 0x105ac6e18>
+
+Accuracy: 0.90833
+Precision: 0.45690
+Recall: 0.53000
+F1: 0.49074
+F2: 0.51357
+
+Total predictions: 1200
+True positives:   53
+False positives:   63
+False negatives:   47
+True negatives: 1037
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: distance
+
+<custom_classifiers.weighted_knn instance at 0x1059bce18>
+
+Accuracy: 0.89500
+Precision: 0.40000
+Recall: 0.52000
+F1: 0.45217
+F2: 0.49057
+
+Total predictions: 1200
+True positives:   52
+False positives:   78
+False negatives:   48
+True negatives: 1022
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: distance
+
+<custom_classifiers.weighted_knn instance at 0x105abee18>
+
+Accuracy: 0.89917
+Precision: 0.40838
+Recall: 0.46800
+F1: 0.43616
+F2: 0.45472
+
+Total predictions: 12000
+True positives:  468
+False positives:  678
+False negatives:  532
+True negatives: 10322
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: distance
+
+<custom_classifiers.weighted_knn instance at 0x105ac0e18>
+
+Accuracy: 0.89892
+Precision: 0.40715
+Recall: 0.46700
+F1: 0.43503
+F2: 0.45366
+
+Total predictions: 12000
+True positives:  467
+False positives:  680
+False negatives:  533
+True negatives: 10320
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105968f38>
+
+Accuracy: 0.91192
+Precision: 0.47118
+Recall: 0.46600
+F1: 0.46858
+F2: 0.46703
+
+Total predictions: 12000
+True positives:  466
+False positives:  523
+False negatives:  534
+True negatives: 10477
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105abfe18>
+
+Accuracy: 0.91192
+Precision: 0.47118
+Recall: 0.46600
+F1: 0.46858
+F2: 0.46703
+
+Total predictions: 12000
+True positives:  466
+False positives:  523
+False negatives:  534
+True negatives: 10477
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059c3e18>
+
+Accuracy: 0.88350
+Precision: 0.30717
+Recall: 0.31700
+F1: 0.31201
+F2: 0.31498
+
+Total predictions: 12000
+True positives:  317
+False positives:  715
+False negatives:  683
+True negatives: 10285
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105ac1e18>
+
+Accuracy: 0.91192
+Precision: 0.47118
+Recall: 0.46600
+F1: 0.46858
+F2: 0.46703
+
+Total predictions: 12000
+True positives:  466
+False positives:  523
+False negatives:  534
+True negatives: 10477
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bde18>
+
+Accuracy: 0.87925
+Precision: 0.34223
+Recall: 0.48700
+F1: 0.40198
+F2: 0.44901
+
+Total predictions: 12000
+True positives:  487
+False positives:  936
+False negatives:  513
+True negatives: 10064
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105abfe18>
+
+Accuracy: 0.87925
+Precision: 0.34223
+Recall: 0.48700
+F1: 0.40198
+F2: 0.44901
+
+Total predictions: 12000
+True positives:  487
+False positives:  936
+False negatives:  513
+True negatives: 10064
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105abfe18>
+
+Accuracy: 0.87233
+Precision: 0.32361
+Recall: 0.48800
+F1: 0.38915
+F2: 0.44299
+
+Total predictions: 12000
+True positives:  488
+False positives: 1020
+False negatives:  512
+True negatives: 9980
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105ac0e18>
+
+Accuracy: 0.86400
+Precision: 0.28763
+Recall: 0.42800
+F1: 0.34405
+F2: 0.38994
+
+Total predictions: 12000
+True positives:  428
+False positives: 1060
+False negatives:  572
+True negatives: 9940
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bee18>
+
+Accuracy: 0.86400
+Precision: 0.28763
+Recall: 0.42800
+F1: 0.34405
+F2: 0.38994
+
+Total predictions: 12000
+True positives:  428
+False positives: 1060
+False negatives:  572
+True negatives: 9940
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bce18>
+
+Accuracy: 0.86892
+Precision: 0.30255
+Recall: 0.43900
+F1: 0.35822
+F2: 0.40268
+
+Total predictions: 12000
+True positives:  439
+False positives: 1012
+False negatives:  561
+True negatives: 9988
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105ac0e18>
+
+Accuracy: 0.87925
+Precision: 0.34223
+Recall: 0.48700
+F1: 0.40198
+F2: 0.44901
+
+Total predictions: 12000
+True positives:  487
+False positives:  936
+False negatives:  513
+True negatives: 10064
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105abde18>
+
+Accuracy: 0.87925
+Precision: 0.34223
+Recall: 0.48700
+F1: 0.40198
+F2: 0.44901
+
+Total predictions: 12000
+True positives:  487
+False positives:  936
+False negatives:  513
+True negatives: 10064
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105ac4e18>
+
+Accuracy: 0.87925
+Precision: 0.34223
+Recall: 0.48700
+F1: 0.40198
+F2: 0.44901
+
+Total predictions: 12000
+True positives:  487
+False positives:  936
+False negatives:  513
+True negatives: 10064
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105abfe18>
+
+Accuracy: 0.89333
+Precision: 0.39062
+Recall: 0.50000
+F1: 0.43860
+F2: 0.47348
+
+Total predictions: 1200
+True positives:   50
+False positives:   78
+False negatives:   50
+True negatives: 1022
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105abde18>
+
+Accuracy: 0.88750
+Precision: 0.37037
+Recall: 0.50000
+F1: 0.42553
+F2: 0.46729
+
+Total predictions: 1200
+True positives:   50
+False positives:   85
+False negatives:   50
+True negatives: 1015
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bee18>
+
+Accuracy: 0.90250
+Precision: 0.42735
+Recall: 0.50000
+F1: 0.46083
+F2: 0.48356
+
+Total predictions: 1200
+True positives:   50
+False positives:   67
+False negatives:   50
+True negatives: 1033
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bde18>
+
+Accuracy: 0.89833
+Precision: 0.41129
+Recall: 0.51000
+F1: 0.45536
+F2: 0.48664
+
+Total predictions: 1200
+True positives:   51
+False positives:   73
+False negatives:   49
+True negatives: 1027
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bce18>
+
+Accuracy: 0.89833
+Precision: 0.41129
+Recall: 0.51000
+F1: 0.45536
+F2: 0.48664
+
+Total predictions: 1200
+True positives:   51
+False positives:   73
+False negatives:   49
+True negatives: 1027
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bde18>
+
+Accuracy: 0.91333
+Precision: 0.48039
+Recall: 0.49000
+F1: 0.48515
+F2: 0.48805
+
+Total predictions: 1200
+True positives:   49
+False positives:   53
+False negatives:   51
+True negatives: 1047
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105abfe18>
+
+Accuracy: 0.90167
+Precision: 0.39535
+Recall: 0.34000
+F1: 0.36559
+F2: 0.34979
+
+Total predictions: 1200
+True positives:   34
+False positives:   52
+False negatives:   66
+True negatives: 1048
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bce18>
+
+Accuracy: 0.89167
+Precision: 0.35577
+Recall: 0.37000
+F1: 0.36275
+F2: 0.36706
+
+Total predictions: 1200
+True positives:   37
+False positives:   67
+False negatives:   63
+True negatives: 1033
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105abde18>
+
+Accuracy: 0.89667
+Precision: 0.40000
+Recall: 0.48000
+F1: 0.43636
+F2: 0.46154
+
+Total predictions: 1200
+True positives:   48
+False positives:   72
+False negatives:   52
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105ac6e18>
+
+Accuracy: 0.91333
+Precision: 0.48039
+Recall: 0.49000
+F1: 0.48515
+F2: 0.48805
+
+Total predictions: 1200
+True positives:   49
+False positives:   53
+False negatives:   51
+True negatives: 1047
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bde18>
+
+Accuracy: 0.89833
+Precision: 0.41129
+Recall: 0.51000
+F1: 0.45536
+F2: 0.48664
+
+Total predictions: 1200
+True positives:   51
+False positives:   73
+False negatives:   49
+True negatives: 1027
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059c2e18>
+
+Accuracy: 0.91333
+Precision: 0.48039
+Recall: 0.49000
+F1: 0.48515
+F2: 0.48805
+
+Total predictions: 1200
+True positives:   49
+False positives:   53
+False negatives:   51
+True negatives: 1047
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bce18>
+
+Accuracy: 0.91333
+Precision: 0.48039
+Recall: 0.49000
+F1: 0.48515
+F2: 0.48805
+
+Total predictions: 1200
+True positives:   49
+False positives:   53
+False negatives:   51
+True negatives: 1047
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105ac0e18>
+
+Accuracy: 0.91333
+Precision: 0.48039
+Recall: 0.49000
+F1: 0.48515
+F2: 0.48805
+
+Total predictions: 1200
+True positives:   49
+False positives:   53
+False negatives:   51
+True negatives: 1047
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105abfe18>
+
+Accuracy: 0.91333
+Precision: 0.48039
+Recall: 0.49000
+F1: 0.48515
+F2: 0.48805
+
+Total predictions: 1200
+True positives:   49
+False positives:   53
+False negatives:   51
+True negatives: 1047
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105abfe18>
+
+Accuracy: 0.91333
+Precision: 0.48039
+Recall: 0.49000
+F1: 0.48515
+F2: 0.48805
+
+Total predictions: 1200
+True positives:   49
+False positives:   53
+False negatives:   51
+True negatives: 1047
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105ac0e18>
+
+Accuracy: 0.90000
+Precision: 0.41525
+Recall: 0.49000
+F1: 0.44954
+F2: 0.47297
+
+Total predictions: 1200
+True positives:   49
+False positives:   69
+False negatives:   51
+True negatives: 1031
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105abdf80>
+
+Accuracy: 0.89750
+Precision: 0.39252
+Recall: 0.42000
+F1: 0.40580
+F2: 0.41420
+
+Total predictions: 1200
+True positives:   42
+False positives:   65
+False negatives:   58
+True negatives: 1035
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105ac5f80>
+
+Accuracy: 0.89750
+Precision: 0.39252
+Recall: 0.42000
+F1: 0.40580
+F2: 0.41420
+
+Total predictions: 1200
+True positives:   42
+False positives:   65
+False negatives:   58
+True negatives: 1035
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bcf80>
+
+Accuracy: 0.89750
+Precision: 0.39252
+Recall: 0.42000
+F1: 0.40580
+F2: 0.41420
+
+Total predictions: 1200
+True positives:   42
+False positives:   65
+False negatives:   58
+True negatives: 1035
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105abdf38>
+
+Accuracy: 0.89750
+Precision: 0.39252
+Recall: 0.42000
+F1: 0.40580
+F2: 0.41420
+
+Total predictions: 1200
+True positives:   42
+False positives:   65
+False negatives:   58
+True negatives: 1035
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105ac0f38>
+
+Accuracy: 0.89750
+Precision: 0.39252
+Recall: 0.42000
+F1: 0.40580
+F2: 0.41420
+
+Total predictions: 1200
+True positives:   42
+False positives:   65
+False negatives:   58
+True negatives: 1035
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bcef0>
+
+Accuracy: 0.89750
+Precision: 0.39252
+Recall: 0.42000
+F1: 0.40580
+F2: 0.41420
+
+Total predictions: 1200
+True positives:   42
+False positives:   65
+False negatives:   58
+True negatives: 1035
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bcea8>
+
+Accuracy: 0.89750
+Precision: 0.39252
+Recall: 0.42000
+F1: 0.40580
+F2: 0.41420
+
+Total predictions: 1200
+True positives:   42
+False positives:   65
+False negatives:   58
+True negatives: 1035
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bce60>
+
+Accuracy: 0.89750
+Precision: 0.39252
+Recall: 0.42000
+F1: 0.40580
+F2: 0.41420
+
+Total predictions: 1200
+True positives:   42
+False positives:   65
+False negatives:   58
+True negatives: 1035
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105ac8e18>
+
+Accuracy: 0.90000
+Precision: 0.41525
+Recall: 0.49000
+F1: 0.44954
+F2: 0.47297
+
+Total predictions: 1200
+True positives:   49
+False positives:   69
+False negatives:   51
+True negatives: 1031
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bde60>
+
+Accuracy: 0.89750
+Precision: 0.39252
+Recall: 0.42000
+F1: 0.40580
+F2: 0.41420
+
+Total predictions: 1200
+True positives:   42
+False positives:   65
+False negatives:   58
+True negatives: 1035
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bcf38>
+
+Accuracy: 0.89750
+Precision: 0.39252
+Recall: 0.42000
+F1: 0.40580
+F2: 0.41420
+
+Total predictions: 1200
+True positives:   42
+False positives:   65
+False negatives:   58
+True negatives: 1035
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105abce18>
+
+Accuracy: 0.90000
+Precision: 0.41525
+Recall: 0.49000
+F1: 0.44954
+F2: 0.47297
+
+Total predictions: 1200
+True positives:   49
+False positives:   69
+False negatives:   51
+True negatives: 1031
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bee18>
+
+Accuracy: 0.88750
+Precision: 0.37037
+Recall: 0.50000
+F1: 0.42553
+F2: 0.46729
+
+Total predictions: 1200
+True positives:   50
+False positives:   85
+False negatives:   50
+True negatives: 1015
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bce18>
+
+Accuracy: 0.89667
+Precision: 0.40000
+Recall: 0.48000
+F1: 0.43636
+F2: 0.46154
+
+Total predictions: 1200
+True positives:   48
+False positives:   72
+False negatives:   52
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bce18>
+
+Accuracy: 0.89667
+Precision: 0.40000
+Recall: 0.48000
+F1: 0.43636
+F2: 0.46154
+
+Total predictions: 1200
+True positives:   48
+False positives:   72
+False negatives:   52
+True negatives: 1028
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105ac5e18>
+
+Accuracy: 0.91333
+Precision: 0.48039
+Recall: 0.49000
+F1: 0.48515
+F2: 0.48805
+
+Total predictions: 1200
+True positives:   49
+False positives:   53
+False negatives:   51
+True negatives: 1047
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bfe18>
+
+Accuracy: 0.91333
+Precision: 0.48039
+Recall: 0.49000
+F1: 0.48515
+F2: 0.48805
+
+Total predictions: 1200
+True positives:   49
+False positives:   53
+False negatives:   51
+True negatives: 1047
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bce18>
+
+Accuracy: 0.88333
+Precision: 0.31132
+Recall: 0.33000
+F1: 0.32039
+F2: 0.32609
+
+Total predictions: 1200
+True positives:   33
+False positives:   73
+False negatives:   67
+True negatives: 1027
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bfe18>
+
+Accuracy: 0.91333
+Precision: 0.48039
+Recall: 0.49000
+F1: 0.48515
+F2: 0.48805
+
+Total predictions: 1200
+True positives:   49
+False positives:   53
+False negatives:   51
+True negatives: 1047
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bce18>
+
+Accuracy: 0.85583
+Precision: 0.27879
+Recall: 0.46000
+F1: 0.34717
+F2: 0.40708
+
+Total predictions: 1200
+True positives:   46
+False positives:  119
+False negatives:   54
+True negatives:  981
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bce18>
+
+Accuracy: 0.89750
+Precision: 0.38614
+Recall: 0.39000
+F1: 0.38806
+F2: 0.38922
+
+Total predictions: 1200
+True positives:   39
+False positives:   62
+False negatives:   61
+True negatives: 1038
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bce18>
+
+Accuracy: 0.91583
+Precision: 0.49485
+Recall: 0.48000
+F1: 0.48731
+F2: 0.48290
+
+Total predictions: 1200
+True positives:   48
+False positives:   49
+False negatives:   52
+True negatives: 1051
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059bde18>
+
+Accuracy: 0.91333
+Precision: 0.48039
+Recall: 0.49000
+F1: 0.48515
+F2: 0.48805
+
+Total predictions: 1200
+True positives:   49
+False positives:   53
+False negatives:   51
+True negatives: 1047
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x1059c1e18>
+
+Accuracy: 0.91583
+Precision: 0.49485
+Recall: 0.48000
+F1: 0.48731
+F2: 0.48290
+
+Total predictions: 1200
+True positives:   48
+False positives:   49
+False negatives:   52
+True negatives: 1051
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10586cf38>
+
+Accuracy: 0.91192
+Precision: 0.47118
+Recall: 0.46600
+F1: 0.46858
+F2: 0.46703
+
+Total predictions: 12000
+True positives:  466
+False positives:  523
+False negatives:  534
+True negatives: 10477
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105863f38>
+
+Accuracy: 0.91358
+Precision: 0.47983
+Recall: 0.44000
+F1: 0.45905
+F2: 0.44743
+
+Total predictions: 12000
+True positives:  440
+False positives:  477
+False negatives:  560
+True negatives: 10523
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105972f38>
+
+Accuracy: 0.91358
+Precision: 0.47983
+Recall: 0.44000
+F1: 0.45905
+F2: 0.44743
+
+Total predictions: 12000
+True positives:  440
+False positives:  477
+False negatives:  560
+True negatives: 10523
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105863f38>
+
+Accuracy: 0.91192
+Precision: 0.47118
+Recall: 0.46600
+F1: 0.46858
+F2: 0.46703
+
+Total predictions: 12000
+True positives:  466
+False positives:  523
+False negatives:  534
+True negatives: 10477
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105867f38>
+
+Accuracy: 0.91358
+Precision: 0.47983
+Recall: 0.44000
+F1: 0.45905
+F2: 0.44743
+
+Total predictions: 12000
+True positives:  440
+False positives:  477
+False negatives:  560
+True negatives: 10523
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105879f38>
+
+Accuracy: 0.88767
+Precision: 0.36996
+Recall: 0.49500
+F1: 0.42344
+F2: 0.46366
+
+Total predictions: 12000
+True positives:  495
+False positives:  843
+False negatives:  505
+True negatives: 10157
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105864f38>
+
+Accuracy: 0.88767
+Precision: 0.36996
+Recall: 0.49500
+F1: 0.42344
+F2: 0.46366
+
+Total predictions: 12000
+True positives:  495
+False positives:  843
+False negatives:  505
+True negatives: 10157
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105971f38>
+
+Accuracy: 0.91192
+Precision: 0.47118
+Recall: 0.46600
+F1: 0.46858
+F2: 0.46703
+
+Total predictions: 12000
+True positives:  466
+False positives:  523
+False negatives:  534
+True negatives: 10477
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105868f38>
+
+Accuracy: 0.91192
+Precision: 0.47118
+Recall: 0.46600
+F1: 0.46858
+F2: 0.46703
+
+Total predictions: 12000
+True positives:  466
+False positives:  523
+False negatives:  534
+True negatives: 10477
+
+-------------------------
+
+Replicator params:
+dominant_class_prevalence: 2
+clf_class: <class 'sklearn.neighbors.classification.KNeighborsClassifier'>
+clf_params: {'n_neighbors': 5, 'weights': 'uniform'}
+
+Pipeline(steps=[('scaler', Normalizer(copy=True, norm='l2')), ('kbest', SelectKBest(k='all', score_func=<function f_classif at 0x10532e5f0>)), ('clf', <custom_classifiers.replicator instance at 0x105ac5d40>)])
+
+Accuracy: 0.68083
+Precision: 0.05079
+Recall: 0.16000
+F1: 0.07711
+F2: 0.11189
+
+Total predictions: 1200
+True positives:   16
+False positives:  299
+False negatives:   84
+True negatives:  801
+
+-------------------------
+
+Replicator params:
+dominant_class_prevalence: 2
+clf_class: <class 'sklearn.neighbors.classification.KNeighborsClassifier'>
+clf_params: {'n_neighbors': 5, 'weights': 'uniform'}
+
+Pipeline(steps=[('scaler', Normalizer(copy=True, norm='l2')), ('clf', <custom_classifiers.replicator instance at 0x105ac6d40>)])
+
+Accuracy: 0.68083
+Precision: 0.05079
+Recall: 0.16000
+F1: 0.07711
+F2: 0.11189
+
+Total predictions: 1200
+True positives:   16
+False positives:  299
+False negatives:   84
+True negatives:  801
+
+-------------------------
+
+Replicator params:
+dominant_class_prevalence: 2
+clf_class: <class 'sklearn.neighbors.classification.KNeighborsClassifier'>
+clf_params: {'n_neighbors': 5, 'weights': 'uniform'}
+
+Pipeline(steps=[('clf', <custom_classifiers.replicator instance at 0x1059bcd40>)])
+
+Accuracy: 0.79417
+Precision: 0.23273
+Recall: 0.64000
+F1: 0.34133
+F2: 0.47407
+
+Total predictions: 1200
+True positives:   64
+False positives:  211
+False negatives:   36
+True negatives:  889
+
+-------------------------
+
+Replicator params:
+dominant_class_prevalence: 2
+clf_class: <class 'sklearn.neighbors.classification.KNeighborsClassifier'>
+clf_params: {'n_neighbors': 5, 'weights': 'uniform'}
+
+Pipeline(steps=[('scaler', Normalizer(copy=True, norm='l2')), ('clf', <custom_classifiers.replicator instance at 0x1059bdd40>)])
+
+Accuracy: 0.68083
+Precision: 0.05079
+Recall: 0.16000
+F1: 0.07711
+F2: 0.11189
+
+Total predictions: 1200
+True positives:   16
+False positives:  299
+False negatives:   84
+True negatives:  801
+
+-------------------------
+
+Replicator params:
+dominant_class_prevalence: 2
+clf_class: <class 'sklearn.neighbors.classification.KNeighborsClassifier'>
+clf_params: {'n_neighbors': 5, 'weights': 'uniform'}
+
+Pipeline(steps=[('scaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('clf', <custom_classifiers.replicator instance at 0x105abfd40>)])
+
+Accuracy: 0.81167
+Precision: 0.19712
+Recall: 0.41000
+F1: 0.26623
+F2: 0.33717
+
+Total predictions: 1200
+True positives:   41
+False positives:  167
+False negatives:   59
+True negatives:  933
+
+-------------------------
+
+Replicator params:
+dominant_class_prevalence: 2
+clf_class: <class 'sklearn.neighbors.classification.KNeighborsClassifier'>
+clf_params: {'n_neighbors': 5, 'weights': 'uniform'}
+
+Pipeline(steps=[('scaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('clf', <custom_classifiers.replicator instance at 0x1059bdd40>)])
+
+Accuracy: 0.81083
+Precision: 0.21525
+Recall: 0.48000
+F1: 0.29721
+F2: 0.38523
+
+Total predictions: 1200
+True positives:   48
+False positives:  175
+False negatives:   52
+True negatives:  925
+
+-------------------------
+
+Replicator params:
+dominant_class_prevalence: 2
+clf_class: <class 'sklearn.neighbors.classification.KNeighborsClassifier'>
+clf_params: {'n_neighbors': 5, 'weights': 'uniform'}
+
+Pipeline(steps=[('clf', <custom_classifiers.replicator instance at 0x1059bdd40>)])
+
+Accuracy: 0.79417
+Precision: 0.23273
+Recall: 0.64000
+F1: 0.34133
+F2: 0.47407
+
+Total predictions: 1200
+True positives:   64
+False positives:  211
+False negatives:   36
+True negatives:  889
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+Pipeline(steps=[('scaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('clf', <custom_classifiers.weighted_knn instance at 0x105864f38>)])
+
+Accuracy: 0.85158
+Precision: 0.17267
+Recall: 0.20600
+F1: 0.18787
+F2: 0.19834
+
+Total predictions: 12000
+True positives:  206
+False positives:  987
+False negatives:  794
+True negatives: 10013
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+Pipeline(steps=[('scaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('clf', <custom_classifiers.weighted_knn instance at 0x105868f38>)])
+
+Accuracy: 0.84925
+Precision: 0.15633
+Recall: 0.18400
+F1: 0.16904
+F2: 0.17771
+
+Total predictions: 12000
+True positives:  184
+False positives:  993
+False negatives:  816
+True negatives: 10007
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+Pipeline(steps=[('scaler', Normalizer(copy=True, norm='l2')), ('clf', <custom_classifiers.weighted_knn instance at 0x10586cf38>)])
+
+Accuracy: 0.86158
+Precision: 0.10795
+Recall: 0.09100
+F1: 0.09875
+F2: 0.09395
+
+Total predictions: 12000
+True positives:   91
+False positives:  752
+False negatives:  909
+True negatives: 10248
+
+-------------------------
+
+Replicator params:
+dominant_class_prevalence: 2
+clf_class: <class 'sklearn.neighbors.classification.KNeighborsClassifier'>
+clf_params: {'n_neighbors': 12, 'weights': 'uniform'}
+
+Pipeline(steps=[('scaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('clf', <custom_classifiers.replicator instance at 0x10586eea8>)])
+
+Accuracy: 0.85833
+Precision: 0.22222
+Recall: 0.28000
+F1: 0.24779
+F2: 0.26616
+
+Total predictions: 1200
+True positives:   28
+False positives:   98
+False negatives:   72
+True negatives: 1002
+
+-------------------------
+
+Replicator params:
+dominant_class_prevalence: 2
+clf_class: <class 'sklearn.neighbors.classification.KNeighborsClassifier'>
+clf_params: {'n_neighbors': 12, 'weights': 'uniform'}
+
+Pipeline(steps=[('scaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('clf', <custom_classifiers.replicator instance at 0x105863ea8>)])
+
+Accuracy: 0.84750
+Precision: 0.20567
+Recall: 0.29000
+F1: 0.24066
+F2: 0.26802
+
+Total predictions: 1200
+True positives:   29
+False positives:  112
+False negatives:   71
+True negatives:  988
+
+-------------------------
+
+Replicator params:
+dominant_class_prevalence: 2
+clf_class: <class 'sklearn.neighbors.classification.KNeighborsClassifier'>
+clf_params: {'n_neighbors': 12, 'weights': 'uniform'}
+
+Pipeline(steps=[('scaler', Normalizer(copy=True, norm='l2')), ('clf', <custom_classifiers.replicator instance at 0x10596dea8>)])
+
+Accuracy: 0.79583
+Precision: 0.02614
+Recall: 0.04000
+F1: 0.03162
+F2: 0.03617
+
+Total predictions: 1200
+True positives:    4
+False positives:  149
+False negatives:   96
+True negatives:  951
+
+-------------------------
+
+Replicator params:
+dominant_class_prevalence: 2
+clf_class: <class 'sklearn.neighbors.classification.KNeighborsClassifier'>
+clf_params: {'n_neighbors': 12, 'weights': 'uniform'}
+
+Pipeline(steps=[('clf', <custom_classifiers.replicator instance at 0x105563ea8>)])
+
+Accuracy: 0.88750
+Precision: 0.39766
+Recall: 0.68000
+F1: 0.50185
+F2: 0.59545
+
+Total predictions: 1200
+True positives:   68
+False positives:  103
+False negatives:   32
+True negatives:  997
+
+-------------------------
+
+SplitterS params:
+certainty: 0.6
+max_imbalance: 2
+clf_mode: 0
+clf_class: <class 'sklearn.neighbors.classification.KNeighborsClassifier'>
+clf_params: {'n_neighbors': 3, 'weights': 'uniform'}
+
+Pipeline(steps=[('scaler', StandardScaler(copy=True, with_mean=True, with_std=True)), ('clf', <custom_classifiers.splitter instance at 0x10515c518>)])
+
+Accuracy: 0.85000
+Precision: 0.18254
+Recall: 0.23000
+F1: 0.20354
+F2: 0.21863
+
+Total predictions: 1200
+True positives:   23
+False positives:  103
+False negatives:   77
+True negatives:  997
+
+-------------------------
+
+SplitterS params:
+certainty: 0.6
+max_imbalance: 2
+clf_mode: 0
+clf_class: <class 'sklearn.neighbors.classification.KNeighborsClassifier'>
+clf_params: {'n_neighbors': 3, 'weights': 'uniform'}
+
+Pipeline(steps=[('scaler', MinMaxScaler(copy=True, feature_range=(0, 1))), ('clf', <custom_classifiers.splitter instance at 0x10515d518>)])
+
+Accuracy: 0.85417
+Precision: 0.20472
+Recall: 0.26000
+F1: 0.22907
+F2: 0.24668
+
+Total predictions: 1200
+True positives:   26
+False positives:  101
+False negatives:   74
+True negatives:  999
+
+-------------------------
+
+SplitterS params:
+certainty: 0.6
+max_imbalance: 2
+clf_mode: 0
+clf_class: <class 'sklearn.neighbors.classification.KNeighborsClassifier'>
+clf_params: {'n_neighbors': 3, 'weights': 'uniform'}
+
+Pipeline(steps=[('scaler', Normalizer(copy=True, norm='l2')), ('clf', <custom_classifiers.splitter instance at 0x105162518>)])
+
+Accuracy: 0.80917
+Precision: 0.05517
+Recall: 0.08000
+F1: 0.06531
+F2: 0.07339
+
+Total predictions: 1200
+True positives:    8
+False positives:  137
+False negatives:   92
+True negatives:  963
+
+-------------------------
+
+SplitterS params:
+certainty: 0.6
+max_imbalance: 2
+clf_mode: 0
+clf_class: <class 'sklearn.neighbors.classification.KNeighborsClassifier'>
+clf_params: {'n_neighbors': 3, 'weights': 'uniform'}
+
+Pipeline(steps=[('scaler', MaxAbsScaler(copy=True)), ('clf', <custom_classifiers.splitter instance at 0x10528a518>)])
+
+Accuracy: 0.85417
+Precision: 0.20472
+Recall: 0.26000
+F1: 0.22907
+F2: 0.24668
+
+Total predictions: 1200
+True positives:   26
+False positives:  101
+False negatives:   74
+True negatives:  999
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+SplitterS params:
+certainty: 0.6
+max_imbalance: 2
+clf_mode: 0
+clf_class: <class 'sklearn.neighbors.classification.KNeighborsClassifier'>
+clf_params: {'n_neighbors': 3, 'weights': 'uniform'}
+
+<custom_classifiers.splitter instance at 0x105212518>
+
+Accuracy: 0.87842
+Precision: 0.35842
+Recall: 0.58100
+F1: 0.44334
+F2: 0.51681
+
+Total predictions: 12000
+True positives:  581
+False positives: 1040
+False negatives:  419
+True negatives: 9960
+
+-------------------------
+
+Replicator params:
+dominant_class_prevalence: 2
+clf_class: <class 'sklearn.neighbors.classification.KNeighborsClassifier'>
+clf_params: {'n_neighbors': 12, 'weights': 'uniform'}
+
+<custom_classifiers.replicator instance at 0x10591aea8>
+
+Accuracy: 0.87733
+Precision: 0.36483
+Recall: 0.63700
+F1: 0.46395
+F2: 0.55430
+
+Total predictions: 12000
+True positives:  637
+False positives: 1109
+False negatives:  363
+True negatives: 9891
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 6
+class_weights: {0: 1, 1: 5}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10591bef0>
+
+Accuracy: 0.88983
+Precision: 0.38484
+Recall: 0.53800
+F1: 0.44871
+F2: 0.49833
+
+Total predictions: 12000
+True positives:  538
+False positives:  860
+False negatives:  462
+True negatives: 10140
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x10591ef38>
+
+Accuracy: 0.91192
+Precision: 0.47118
+Recall: 0.46600
+F1: 0.46858
+F2: 0.46703
+
+Total predictions: 12000
+True positives:  466
+False positives:  523
+False negatives:  534
+True negatives: 10477
+
+-------------------------
+
+weighted_knn params:
+n_neighbors: 10
+class_weights: {0: 1, 1: 3}
+distance_weights: uniform
+
+<custom_classifiers.weighted_knn instance at 0x105220f38>
+
+Accuracy: 0.91192
+Precision: 0.47118
+Recall: 0.46600
+F1: 0.46858
+F2: 0.46703
+
+Total predictions: 12000
+True positives:  466
+False positives:  523
+False negatives:  534
+True negatives: 10477
+
+-------------------------
+
+<custom_classifiers.weighted_knn instance at 0x10502a830>
+
+Accuracy: 0.91192
+Precision: 0.47118
+Recall: 0.46600
+F1: 0.46858
+F2: 0.46703
+
+Total predictions: 12000
+True positives:  466
+False positives:  523
+False negatives:  534
+True negatives: 10477
+
+-------------------------
+

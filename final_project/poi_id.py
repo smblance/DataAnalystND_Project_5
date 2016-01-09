@@ -13,20 +13,20 @@ from tester import dump_classifier_and_data
 ### features_list is a list of strings, each of which is a feature name.
 ### The first feature must be "poi".
 financial_features = [ \
-	#'salary', 
+	# 'salary', 
 	'deferral_payments',
 	'total_payments',
-	#'loan_advances',
+	# 'loan_advances',
 	'bonus',
-	#'restricted_stock_deferred', 
+	# 'restricted_stock_deferred', 
 	'deferred_income', 
-	#'total_stock_value', 
-	#'expenses', 
+	# 'total_stock_value', 
+	# 'expenses', 
 	'exercised_stock_options', 
 	'other', 
 	'long_term_incentive', 
 	'restricted_stock', 
-	#'director_fees'
+	# 'director_fees'
 	]
 
 email_features = [ \
@@ -63,6 +63,7 @@ for name in data_dict:
 				data_dict[name][feature] = 0
 
 # remove outliers
+names_initial = data_dict.keys()
 data_dict = {k:v for k,v in data_dict.iteritems() if v['salary'] < 6e5}
 data_dict = {k:v for k,v in data_dict.iteritems() if v['deferral_payments'] < 2e6}
 data_dict = {k:v for k,v in data_dict.iteritems() if v['total_payments'] < 9e7}
@@ -82,19 +83,21 @@ data_dict = {k:v for k,v in data_dict.iteritems() if v['from_messages'] < 4000}
 data_dict = {k:v for k,v in data_dict.iteritems() if v['from_this_person_to_poi'] < 300}
 data_dict = {k:v for k,v in data_dict.iteritems() if v['shared_receipt_with_poi'] < 4000}
 
+# print 'Names of the outlers removed:', [name for name in names_initial if name not in data_dict.keys()]
+
 ### Task 3: Create new feature(s)
 ### Store to my_dataset for easy export below.
 
 my_dataset = data_dict
 
 # add feature 'part_of_incoming_from_poi' = 'from_poi_to_this_person'/'to_messages'
-# as the feature idoesn't improve the final score, it's commented out
+# as the feature doesn't improve the final score, it's commented out
 # for name in my_dataset:
 # 	if my_dataset[name]['from_poi_to_this_person'] != 0 and my_dataset[name]['to_messages'] != 0:
 # 		my_dataset[name].update({'part_of_incoming_from_poi' : my_dataset[name]['from_poi_to_this_person']/my_dataset[name]['to_messages']})
 # 	else:
 # 		my_dataset[name].update({'part_of_incoming_from_poi' : 0})
-#features_list.append('part_of_incoming_from_poi')
+# features_list.append('part_of_incoming_from_poi')
 
 ### Extract features and labels from dataset for local testing
 data = featureFormat(my_dataset, features_list, sort_keys = True, remove_NaN = True)
@@ -138,6 +141,12 @@ weighted_knn_clf_2 = weighted_knn(n_neighbors = 10,
 
 clf = weighted_knn_clf_2
 
+# adding any of the following scalers reduces F1-score to 0.1-0.2,
+# so no scaling is deployed
+# from sklearn.preprocessing import MaxAbsScaler, MinMaxScaler, StandardScaler, Normalizer
+# from sklearn.pipeline import Pipeline
+# scalers = [MaxAbsScaler(), MinMaxScaler(), StandardScaler(), Normalizer()]
+# clf = Pipeline([('scaler',scalers[0]), ('clf',splitter_knn_clf)])
 
 ### Task 5: Tune your classifier to achieve better than .3 precision and recall 
 ### using our testing script. Check the tester.py script in the final project
@@ -155,6 +164,7 @@ from tester import test_classifier
 
 folds = 1000
 test_classifier(clf, my_dataset, features_list, folds = folds)
+
 
 ### Task 6: Dump your classifier, dataset, and features_list so anyone can
 ### check your results. You do not need to change anything below, but make sure

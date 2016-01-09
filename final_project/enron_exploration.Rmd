@@ -6,11 +6,10 @@ output: html_document
 ---
 
 ```{r}
-setwd('~/DataAnalyst/Projects/DataAnalystND_Project_5/ud120-projects/final_project/')
+setwd('~/DataAnalyst/Projects/DataAnalystND_Project_5/final_project/')
 enron = read.csv('final_project_data.csv')
 enron <- subset(enron, name != 'TOTAL')
 enron <- enron[-18]
-subset(enron, is.nan) <- 0
 library(ggplot2)
 ```
 

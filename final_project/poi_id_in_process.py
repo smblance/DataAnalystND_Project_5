@@ -36,6 +36,31 @@ email_features = [ \
 	#'shared_receipt_with_poi'
 	]
 
+financial_features = [ \
+	# 'salary', 
+	'deferral_payments',
+	'total_payments',
+	# 'loan_advances',
+	'bonus',
+	# 'restricted_stock_deferred', 
+	'deferred_income', 
+	# 'total_stock_value', 
+	# 'expenses', 
+	'exercised_stock_options', 
+	'other', 
+	# 'long_term_incentive', 
+	'restricted_stock', 
+	# 'director_fees'
+	]
+
+email_features = [ \
+	# 'to_messages', 
+	# 'from_poi_to_this_person', 
+	# 'from_messages', 
+	# 'from_this_person_to_poi',
+	# 'shared_receipt_with_poi'
+	]
+
 features_list = ['poi'] + financial_features + email_features
 
 ### Load the dictionary containing the dataset
@@ -91,7 +116,7 @@ my_dataset = data_dict
 # 		my_dataset[name].update({'part_of_incoming_from_poi' : my_dataset[name]['from_poi_to_this_person']/my_dataset[name]['to_messages']})
 # 	else:
 # 		my_dataset[name].update({'part_of_incoming_from_poi' : 0})
-#features_list.append('part_of_incoming_from_poi')
+# features_list.append('part_of_incoming_from_poi')
 
 ### Extract features and labels from dataset for local testing
 data = featureFormat(my_dataset, features_list, sort_keys = True, remove_NaN = True)
@@ -193,15 +218,15 @@ repl = replicator(dominant_class_prevalence = 2,
 
 
 pipe = Pipeline([ \
-	('scaler', normalizer),
-	('kbest', kbest), 
-	('pca', pca), 
-	('clf', linsvc)])
+	# ('scaler', minmaxscaler),
+	# ('kbest', kbest), 
+	#('pca', pca), 
+	('clf', repl)])
 
-#clf = weighted_knn(n_neighbors = 6, class_weights={0:1, 1:2}, distance_weights = 'distance')
+clf = weighted_knn(n_neighbors = 10, class_weights={0:1, 1:3}, distance_weights = 'uniform')
 #clf = weighted_knn(n_neighbors = 5, class_weights={0:1, 1:2}, distance_weights = 'uniform')
 #clf = weighted_knn(n_neighbors = 5, class_weights={0:1, 1:1}, distance_weights = 'uniform')
-clf = repl
+# clf = pipe
 
 
 ### Task 5: Tune your classifier to achieve better than .3 precision and recall 

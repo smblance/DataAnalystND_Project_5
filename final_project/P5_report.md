@@ -1,4 +1,4 @@
-## Project report for P5, Udacity NanoDegree.
+## Project Report for P5, Udacity NanoDegree.
 ### Investigating Enron Dataset with Machine Learning.
 _Mark Ayzenshtadt, Jan 2016._
 
@@ -22,14 +22,19 @@ The dataset that I'll be using in the project has 145 entries (people), 14 finan
 
 Most of the features have missing values - for example `loan_advances` has only 3 non-NaN entries.<br />Using the provided __enron61702insiderpay.pdf__ document, I've made a conclusion that NaNs in the financial data actually represent zeros.<br />NaNs in email information mean that we don't have access to a person's emails, so I chose to replace NaN with a feature's median value.
 
-I've started by examining the dataset in R and finding some outliers.<br />As the presence of outliers is poorly affecting the performance of most of the algorightms, I've removed about 2-3 extreme points for each feature.<br />Outliers for most of the features overlap, as top executives have very high financial parameters.
+I've started by examining the dataset in R and finding some outliers.<br />As the presence of outliers is poorly affecting performance of most of the algorightms, I've removed about 2-3 extreme points for each feature.<br />Outliers for most of the features overlap, as top executives have very high financial parameters.<br />Names of the outlying people that were removed:<br />HANNON KEVIN P, HORTON STANLEY C, HUMPHREY GENE E, SHANKMAN JEFFREY A, URQUHART JOHN A, BECK SALLY W, LAVORATO JOHN J, SHAPIRO RICHARD S, DELAINEY DAVID W, LAY KENNETH L, MCCLELLAN GEORGE, HAEDICKE MARK E, BELDEN TIMOTHY N, RICE KENNETH D, KAMINSKI WINCENTY J, SKILLING JEFFREY K, PICKERING MARK R, KEAN STEVEN J, TOTAL, WHITE JR THOMAS E, ALLEN PHILLIP K, BHATNAGAR SANJAY, HIRKO JOSEPH, FREVERT MARK A, PAI LOU L, MARTIN AMANDA K.
 
-### 2. Feature selection
-First, I added a feature `'part_of_incoming_from_poi' = 'from_poi_to_this_person'/'to_messages'.`<br />This feature shows what part of incoming messages to a person was from a poi, and I expect high level of this feature to mean that the person is also a poi.<br />After testing, this feature didn't make it to the final list.
 
-I started with using some of the features that I've found relevant in the exploration and tried different algorithms.<br />With every algorithm I examined if scaling/PCA/SelectKBest improved the performance of the classifier.
+### 2. Feature selection and scaling
+First, I added a feature `'part_of_incoming_from_poi' = 'from_poi_to_this_person'/'to_messages'.`<br />This feature shows what part of incoming messages to a person was from a poi, and I expect high level of this feature to mean that the person is also a poi.<br />Adding this feature didn't not change the F1-score, so I didn't add it to the final list.
 
-Scaling/PCA/Kbest didn't prove useful with the algorithm that I was content with (k-NN), and I came up with the following iterative process:<br />First, I tuned the parameters of the chosen algorithm with all available features.<br />Then I removed one feature and noted if it improved performance. After doing this  with every feature, I had a list of rather good features.<br />Then I iteratively reduced the list with the same method until I had a list from which I couldn't remove any single feature withiout reducing performance.<br />In the end, I was left with 8 financial features and no email features.
+I've used SelectKBest for feature selection.<br />These are the scores of the features:<br />bonus - 6.9<br />total\_payments - 3.19<br />long\_term\_incentive - 2.28<br />exercised\_stock\_options - 1.19<br />director\_fees - 1.15<br />other - 0.94<br />salary - 0.91<br />restricted\_stock - 0.82<br />deferral\_payments - 0.63<br />restricted\_stock\_deferred - 0.52<br />from\_messages - 0.18<br />to\_messages - 0.15<br />shared\_receipt\_with\_poi - 0.13<br />from\_this\_person\_to\_poi - 0.13<br />from\_poi\_to\_this\_person - 0.12<br />deferred\_income - 0.09<br />total\_stock\_value - 0.03<br />expenses - 0.02<br />part\_of\_incoming\_from\_poi - nan<br />loan\_advances - nan<br />
+
+At first, I took 9 features with highest scores: bonus, total\_payments, long\_term\_incentive, exercised\_stock\_options, director\_fees, other, salary, restricted\_stock, deferral\_payments, and restricted\_stock\_deferred.
+
+Then I experimented with adding or removing some of the features to this list and tried to improve the score using different feature combinations.<br />Mainly, I added/removed a feature and looked at the score, but sometimes the presence of some other feature changed the influence of the feature on the score, so this process was more of trial-and-error. <br />There aren't too many features so I'm fairly sure that the score cannot be improved with changing set of features for the model.<br />This is the list I ended up with: bonus, total\_payments, long\_term\_incentive, exercised\_stock\_options, other, restricted\_stock, deferral\_payments, and deferred\_income.<br />Adding or removing any features either reduces or does not change the F1-score.
+
+I deployed scaling with sklearn's MaxAbsScaler, MinMaxScaler, StandardScaler, Normalizer, but using any of these with the modified k-NN algorithms that I ended up using reduced F1-score from 0.44-0.47 to 0.1-0.2, so scaling is not utilised.
 
 ### 3. Algorithm choice and performance
 It would be logical to discuss evaluation metrics before discussing how I was choosing an algorithm.<br />The top-of-mind evaluation metric is __accuracy__ - correct fraction of predictions. But when we have an unbalanced dataset - in this case 12% to 88% (7 times less poi that non-poi) - even a trivial one-class classifier will have 88% accuracy.<br />Next natural step is to look at the __preicision__ and __recall__ metrics.<br />Precision shows what part of positive predictions (poi) was true, and recall shows what part of true predictions was predicted as true.<br />Most algorithms have trouble fitting to unbalanced data (understanding that the rare class is rare) and will thus have a lot of false-positive predictions. This will lead to naturally low values of precision.<br />On the other side, unbalanced data does not stop an algorithm from fitting to the rare class and thus recall values are often considerable.<br />So, I chose precision as the first target, and after acquiring 0.3 precision, I proceeded to tune the algorithm for higher __F1-score__, which is an aggregate measure of precision and recall.<br />To test different algorithms I used the provided tester.py script, with folds = 100.
@@ -47,17 +52,31 @@ The only classifier using which I could consistently achieve precision greater t
 
 When I focused on k-NN, I understood that I wanted to give more weight to the votes of the neighbors of the rare class. As it wasn't possible in the standard sklearn implementation, I've made the __weighted\_knn__ classifier.<br />It mirrors the functionality of sklearn version of k-NN as it has `n_neighbors` and `distance_weights` (`distance` in sklearn) parameters.<br />It also has `class_weights` parameter, a dictionary of weights of the classes, which is applied at the voting process. The default value is `balanced`, which makes class weights equal to inverse class frequencies (rare class = more weight).<br />Weighted\_knn is equal to standard k-NN if class weights are equal, and the scores proved to be identical.<br />The difference between replicator+knn and weighted\_knn is that in weighted\_knn, poi points occupy only one neighbor slot, and in replicator+knn one poi point act as more that one neighbor, as it is replicated. Replication puts more weight to the poi votes, as does class\_weight in weighted\_knn.
 
-All three of the mentioned algorithms performed well and showed F1-score of __0.44-0.47__ and are present in the __poi_id.py__ script.<br />The best F1-score that I managed to achieve was __0.47__ with weighted\_knn classifier, `n_neighbors = 10`, `class_weights = {0:1, 1:3}` and uniform distance weights.
+All 3 algorithms are present in the final __poi_id.py__ script.
 
 ### 4. Hyperparameter optimization
 Most of the algorithms will not work out-of-the-box with every data.<br />To achieve desired performance, you need to change the internal parameters of the algorithm. This process is called hyperparameter optimization, and it's done to ensure that the model generalizes well to the data it was not trained on.
 
 One of the useful methods is grid search, implemented in sklearn as GridSearchCV. It tries every possible combination of parameters from the supplied lists and through cross validation finds the combination of parameters that maximizes the chosen metric.<br />I tried using GridSearchCV with sklearn algorithms, but in such a broad search, it was too slow and I went to manually choosing parameters.<br />Also, I've duplicated the output to the _log.txt_ file to have a history of my search.
 
+All three algorithms described in section 3 performed well. The scores that I managed to achieve are:
+
+`splitter (max_imbalance = 2, certainty = 0.6, clf_class = KNeighborsClassifier, clf_mode = 0, n_neighbors = 3, weights = 'uniform')`<br />has __F1 = 0.44334__.
+
+`replicator (dominant_class_prevalence = 2, clf_class = KNeighborsClassifier, n_neighbors = 12, weights = 'uniform')`<br />has __F1 = 0.46395__.
+
+`weighted_knn (n_neighbors = 6, class_weights= {0:1, 1:5}, distance_weights = 'uniform')`<br />has __F1 = 0.44871__.
+
+`weighted_knn (n_neighbors = 10, class_weights = {0:1, 1:3}, distance_weights = 'uniform')`<br />has __F1 = 0.46858__.
+
+All four of these models are present in the final poi\_id.py, and the last one is used for classifying.
+
 ### 5. Cross-validation
 Cross-validation is a method of ensuring that the model is generalizing well to the data that it was not trained on.<br />It is done by splitting the data into training and testing sets, training the algorithm on the training set and assessing the performance on the test set.<br />One classic mistake that can be done is testing the performance on the training set. This way you have no way of assesing if the data was overfit to the training set, and the performance will naturally be very high.<br />We want to know how the model will perform on the data that it wasn't trained on, and thus we should carefully look at what data we're testing the algorithm on.
 
-Our dataset is imbalanced in respect to the distribution between classes, and we want our cross validation splits to have the same class distribution.<br />Sklearn's StratifiedShuffleSplit and StratifiedKFold are made to adress this issue, and I chose StratifiedShuffleSplit as in tester.py.<br />I tested the algorithm's performance with provided tester.py script, with folds = 100 at the search stage and folds = 1000 in the final tuning.
+Our dataset is imbalanced in respect to the distribution between classes, and we want our cross validation splits to have the same class distribution.<br />Sklearn's StratifiedShuffleSplit and StratifiedKFold are made to adress this issue, and I chose StratifiedShuffleSplit as in tester.py.
+
+I tested the algorithm's performance with provided tester.py script, with folds = 100 at the search stage and folds = 1000 in the final tuning.
 
 ### 6. Evaluation metrics
 Evaluation metrics were discussed at the beginning of section 3.
