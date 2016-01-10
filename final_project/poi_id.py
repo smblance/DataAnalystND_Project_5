@@ -63,27 +63,8 @@ for name in data_dict:
 				data_dict[name][feature] = 0
 
 # remove outliers
-names_initial = data_dict.keys()
-data_dict = {k:v for k,v in data_dict.iteritems() if v['salary'] < 6e5}
-data_dict = {k:v for k,v in data_dict.iteritems() if v['deferral_payments'] < 2e6}
-data_dict = {k:v for k,v in data_dict.iteritems() if v['total_payments'] < 9e7}
-data_dict = {k:v for k,v in data_dict.iteritems() if v['bonus'] < 5e6}
-data_dict = {k:v for k,v in data_dict.iteritems() if v['restricted_stock_deferred'] < 1e6}
-data_dict = {k:v for k,v in data_dict.iteritems() if v['deferred_income'] > -2e6}
-data_dict = {k:v for k,v in data_dict.iteritems() if v['total_stock_value'] < 2e7}
-data_dict = {k:v for k,v in data_dict.iteritems() if v['expenses'] < 1.5e5}
-data_dict = {k:v for k,v in data_dict.iteritems() if v['exercised_stock_options'] < 1e7}
-data_dict = {k:v for k,v in data_dict.iteritems() if v['other'] < 3e6}
-data_dict = {k:v for k,v in data_dict.iteritems() if v['long_term_incentive'] < 3e6}
-data_dict = {k:v for k,v in data_dict.iteritems() if v['restricted_stock'] < 5e6}
-data_dict = {k:v for k,v in data_dict.iteritems() if v['director_fees'] < 3e6}
-data_dict = {k:v for k,v in data_dict.iteritems() if v['to_messages'] < 1e4}
-data_dict = {k:v for k,v in data_dict.iteritems() if v['from_poi_to_this_person'] < 400}
-data_dict = {k:v for k,v in data_dict.iteritems() if v['from_messages'] < 4000}
-data_dict = {k:v for k,v in data_dict.iteritems() if v['from_this_person_to_poi'] < 300}
-data_dict = {k:v for k,v in data_dict.iteritems() if v['shared_receipt_with_poi'] < 4000}
 
-# print 'Names of the outlers removed:', [name for name in names_initial if name not in data_dict.keys()]
+data_dict = {k:v for k,v in data_dict.iteritems() if k != 'TOTAL'}
 
 ### Task 3: Create new feature(s)
 ### Store to my_dataset for easy export below.
@@ -114,7 +95,7 @@ labels, features = targetFeatureSplit(data)
 from sklearn.neighbors import KNeighborsClassifier
 from custom_classifiers import *
 
-# F1 = 0.44
+# F1 = 0.41
 splitter_knn_clf = splitter(max_imbalance = 2, 
 					certainty = 0.6,
 					clf_class = KNeighborsClassifier,
@@ -122,18 +103,18 @@ splitter_knn_clf = splitter(max_imbalance = 2,
 					n_neighbors = 3,
 					weights = 'uniform')
 
-# F1 = 0.46
+# F1 = 0.38
 replicator_knn_clf = replicator(dominant_class_prevalence = 2,
 						clf_class = KNeighborsClassifier,
 						n_neighbors = 12,
 						weights = 'uniform')
 
-# F1 = 0.45
+# F1 = 0.39
 weighted_knn_clf_1 = weighted_knn(n_neighbors = 6, 
 						class_weights= {0:1, 1:5}, 
 						distance_weights = 'uniform')
 
-# F1 = 0.47
+# F1 = 0.51
 weighted_knn_clf_2 = weighted_knn(n_neighbors = 10, 
 						class_weights = {0:1, 1:3}, 
 						distance_weights = 'uniform')
@@ -160,10 +141,10 @@ clf = weighted_knn_clf_2
 # features_train, features_test, labels_train, labels_test = \
 #     train_test_split(features, labels, test_size=0.3, random_state=42)
 
-from tester import test_classifier
+# from tester import test_classifier
 
-folds = 1000
-test_classifier(clf, my_dataset, features_list, folds = folds)
+# folds = 1000
+# test_classifier(clf, my_dataset, features_list, folds = folds)
 
 
 ### Task 6: Dump your classifier, dataset, and features_list so anyone can

@@ -8,7 +8,8 @@ All relevant files are contained in the __final_project__ directory of the repo.
 Files provided by Udacity for the project:<br />__final\_project\_dataset.pkl__ - dataset to be used for the project.<br />__tester.py__ - script for testing classifier performance.<br />__enron61702insiderpay.pdf__ - financial data on the Enron employees.<br />__poi\_names.txt/poi\_email\_addresses.py__ - names and email addresses of the people involved in the fraud and their presence in the dataset.<br />__../tools/feature\_format.py__ - script for converting data from dictionary format to a python list.
 
 
-Files made by me for the project:<br />__P5\_report.md / P5\_report.html__ - this report.<br />__poi\_id.py__ - the final version of the classifying script.<br />__poi\_id\_in\_process.py__ - intermediate (dirty) version of the classifying script.<br />__custom\_classifiers.py__ - contains the custom classifiers made for this project and used in poi\_id.py.<br />__enron\_to\_csv.py__ - exports project data to __final\_project\_data.csv__ for use in R.<br />__enron\_exploration.Rmd__ - some statistics and plots in R Markdown.<br />__log.txt__ - log of the parameters and performance metrics of the classifiers tested with tester.py.<br />__my\_classifier.pkl, my\_dataset.pkl, my\_feature\_list.pkl__ - classifier, dataset and feature_list exported by poi\_id.py.<br />__references.txt__ - reference list.
+Files made by me for the project:<br />__P5\_report.md / P5\_report.html__ - this report.<br />__poi\_id.py__ - the final version of the classifying script.<br />__poi\_id\_in\_process.py__ - intermediate (dirty) version of the classifying script.<br />__custom\_classifiers.py__ - contains the custom classifiers made for this project and used in poi\_id.py.<br />__enron\_to\_csv.py__ - exports project data to __final\_project\_data.csv__ for use in R.<br />__enron\_exploration.Rmd__ - some statistics and plots in R Markdown.<br />__log.txt__ - log of the parameters and performance metrics of the classifiers tested with tester.py.<br />__my\_classifier.pkl
+, my\_dataset.pkl, my\_feature\_list.pkl__ - classifier, dataset and feature_list exported by poi\_id.py.<br />__references.txt__ - reference list.
 
 
 ### 1. Overview
@@ -22,7 +23,7 @@ The dataset that I'll be using in the project has 145 entries (people), 14 finan
 
 Most of the features have missing values - for example `loan_advances` has only 3 non-NaN entries.<br />Using the provided __enron61702insiderpay.pdf__ document, I've made a conclusion that NaNs in the financial data actually represent zeros.<br />NaNs in email information mean that we don't have access to a person's emails, so I chose to replace NaN with a feature's median value.
 
-I've started by examining the dataset in R and finding some outliers.<br />As the presence of outliers is poorly affecting performance of most of the algorightms, I've removed about 2-3 extreme points for each feature.<br />Outliers for most of the features overlap, as top executives have very high financial parameters.<br />Names of the outlying people that were removed:<br />HANNON KEVIN P, HORTON STANLEY C, HUMPHREY GENE E, SHANKMAN JEFFREY A, URQUHART JOHN A, BECK SALLY W, LAVORATO JOHN J, SHAPIRO RICHARD S, DELAINEY DAVID W, LAY KENNETH L, MCCLELLAN GEORGE, HAEDICKE MARK E, BELDEN TIMOTHY N, RICE KENNETH D, KAMINSKI WINCENTY J, SKILLING JEFFREY K, PICKERING MARK R, KEAN STEVEN J, TOTAL, WHITE JR THOMAS E, ALLEN PHILLIP K, BHATNAGAR SANJAY, HIRKO JOSEPH, FREVERT MARK A, PAI LOU L, MARTIN AMANDA K.
+I've started by examining the dataset in R and finding about 15 outliers.<br />One outlier - TOTAL - is an aggregate value for all points, and thus isn't a valid entry.<br />I removed it.<br />Other outliers seem plausible, and there was no evidence to remove them.
 
 
 ### 2. Feature selection and scaling
@@ -34,7 +35,7 @@ At first, I took 9 features with highest scores: bonus, total\_payments, long\_t
 
 Then I experimented with adding or removing some of the features to this list and tried to improve the score using different feature combinations.<br />Mainly, I added/removed a feature and looked at the score, but sometimes the presence of some other feature changed the influence of the feature on the score, so this process was more of trial-and-error. <br />There aren't too many features so I'm fairly sure that the score cannot be improved with changing set of features for the model.<br />This is the list I ended up with: bonus, total\_payments, long\_term\_incentive, exercised\_stock\_options, other, restricted\_stock, deferral\_payments, and deferred\_income.<br />Adding or removing any features either reduces or does not change the F1-score.
 
-I deployed scaling with sklearn's MaxAbsScaler, MinMaxScaler, StandardScaler, Normalizer, but using any of these with the modified k-NN algorithms that I ended up using reduced F1-score from 0.44-0.47 to 0.1-0.2, so scaling is not utilised.
+I deployed scaling with sklearn's MaxAbsScaler, MinMaxScaler, StandardScaler, Normalizer, but using any of these with the modified k-NN algorithms that I ended up using reduced F1-score from 0.4-0.5 to 0.1-0.2, so scaling is not utilised.
 
 ### 3. Algorithm choice and performance
 It would be logical to discuss evaluation metrics before discussing how I was choosing an algorithm.<br />The top-of-mind evaluation metric is __accuracy__ - correct fraction of predictions. But when we have an unbalanced dataset - in this case 12% to 88% (7 times less poi that non-poi) - even a trivial one-class classifier will have 88% accuracy.<br />Next natural step is to look at the __preicision__ and __recall__ metrics.<br />Precision shows what part of positive predictions (poi) was true, and recall shows what part of true predictions was predicted as true.<br />Most algorithms have trouble fitting to unbalanced data (understanding that the rare class is rare) and will thus have a lot of false-positive predictions. This will lead to naturally low values of precision.<br />On the other side, unbalanced data does not stop an algorithm from fitting to the rare class and thus recall values are often considerable.<br />So, I chose precision as the first target, and after acquiring 0.3 precision, I proceeded to tune the algorithm for higher __F1-score__, which is an aggregate measure of precision and recall.<br />To test different algorithms I used the provided tester.py script, with folds = 100.
@@ -59,15 +60,15 @@ Most of the algorithms will not work out-of-the-box with every data.<br />To ach
 
 One of the useful methods is grid search, implemented in sklearn as GridSearchCV. It tries every possible combination of parameters from the supplied lists and through cross validation finds the combination of parameters that maximizes the chosen metric.<br />I tried using GridSearchCV with sklearn algorithms, but in such a broad search, it was too slow and I went to manually choosing parameters.<br />Also, I've duplicated the output to the _log.txt_ file to have a history of my search.
 
-All three algorithms described in section 3 performed well. The scores that I managed to achieve are:
+All three algorithms described in section 3 quite performed well. The scores that I managed to achieve are:
 
-`splitter (max_imbalance = 2, certainty = 0.6, clf_class = KNeighborsClassifier, clf_mode = 0, n_neighbors = 3, weights = 'uniform')`<br />has __F1 = 0.44334__.
+`splitter (max_imbalance = 2, certainty = 0.6, clf_class = KNeighborsClassifier, clf_mode = 0, n_neighbors = 3, weights = 'uniform')`<br />has __F1 = 0.40707__.
 
-`replicator (dominant_class_prevalence = 2, clf_class = KNeighborsClassifier, n_neighbors = 12, weights = 'uniform')`<br />has __F1 = 0.46395__.
+`replicator (dominant_class_prevalence = 2, clf_class = KNeighborsClassifier, n_neighbors = 12, weights = 'uniform')`<br />has __F1 = 0.38360__.
 
-`weighted_knn (n_neighbors = 6, class_weights= {0:1, 1:5}, distance_weights = 'uniform')`<br />has __F1 = 0.44871__.
+`weighted_knn (n_neighbors = 6, class_weights= {0:1, 1:5}, distance_weights = 'uniform')`<br />has __F1 = 0.39629__.
 
-`weighted_knn (n_neighbors = 10, class_weights = {0:1, 1:3}, distance_weights = 'uniform')`<br />has __F1 = 0.46858__.
+`weighted_knn (n_neighbors = 10, class_weights = {0:1, 1:3}, distance_weights = 'uniform')`<br />has __F1 = 0.50935__.
 
 All four of these models are present in the final poi\_id.py, and the last one is used for classifying.
 
